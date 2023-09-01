@@ -17,7 +17,7 @@ app.secret_key = '6d0d6a76c0e1522467f9cc1681db0a5472bd1c30a03832d1af4b71f3816d8f
 @app.route('/')
 def index():
     if 'username' in session:
-        return f'Привет, {session["username"]}'
+        return render_template('index.html')
     else:
         return redirect(url_for('login'))
 
